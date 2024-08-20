@@ -3,6 +3,9 @@ export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./index.html"],
   theme: {
     extend: {
+      fontFamily: {
+        inter: ["inter", "sans-serif"],
+      },
       colors: {
         limeGreen: "hsl(163, 72%, 41%)",
         brightRed: "hsl(356, 69%, 56%)",

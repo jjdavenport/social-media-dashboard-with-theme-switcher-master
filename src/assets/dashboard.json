@@ -4,31 +4,39 @@
     "username": "@nathanf",
     "followers": 1987,
     "type": "Followers",
-    "changeToday": 12,
-    "images": "./images/icon-facebook.svg"
+    "changeToday": "12 Today",
+    "images": "./images/icon-facebook.svg",
+    "arrow": "./images/icon-up.svg",
+    "trend": true
   },
   {
     "border": "twitter",
     "username": "@nathanf",
     "followers": 1044,
     "type": "Followers",
-    "changeToday": 99,
-    "images": "./images/icon-twitter.svg"
+    "changeToday": "99 Today",
+    "images": "./images/icon-twitter.svg",
+    "arrow": "./images/icon-up.svg",
+    "trend": true
   },
   {
     "border": "instagram",
     "username": "@realnathanf",
     "followers": "11k",
     "type": "Followers",
-    "changeToday": 1099,
-    "images": "./images/icon-instagram.svg"
+    "changeToday": "1099 Today",
+    "images": "./images/icon-instagram.svg",
+    "arrow": "./images/icon-up.svg",
+    "trend": true
   },
   {
     "border": "youtube",
     "username": "Nathan F.",
     "followers": 8239,
     "type": "Subscribers",
-    "changeToday": 144,
-    "images": "./images/icon-youtube.svg"
+    "changeToday": "144 Today",
+    "images": "./images/icon-youtube.svg",
+    "arrow": "./images/icon-down.svg",
+    "trend": false
   }
 ]
