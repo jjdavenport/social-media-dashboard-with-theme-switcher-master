@@ -8,13 +8,13 @@ import Footer from "./footer";
 function App() {
   return (
     <>
-      <main className="font-inter flex flex-col gap-2 bg-lightThemeBg dark:bg-darkThemeBg">
+      <main className="font-inter flex flex-col gap-2 bg-lightThemeBg dark:bg-darkThemeBg md:h-screen">
         <Header />
         <Dashboard />
         <OverviewTitle />
         <Overview />
+        <Footer />
       </main>
-      <Footer />
     </>
   );
 }
