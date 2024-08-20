@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <>
-      <footer className="flex gap-1 text-xs justify-center font-inter">
+      <footer className="flex gap-1 text-xs text-lightThemeVeryDarkBlueText justify-center font-inter bg-lightThemeBg dark:bg-darkThemeBg dark:text-darkThemeWhiteText">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
           Frontend Mentor
