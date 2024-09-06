@@ -2,6 +2,7 @@
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./index.html"],
   theme: {
+    darkMode: "class",
     extend: {
       fontFamily: {
         inter: ["inter", "sans-serif"],

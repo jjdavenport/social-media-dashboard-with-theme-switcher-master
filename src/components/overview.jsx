@@ -3,7 +3,7 @@ import data from "./assets/overview.json";
 const Overview = () => {
   return (
     <>
-      <section className="flex flex-col gap-4 md:grid md:grid-rows-2 md:grid-flow-col p-4">
+      <section className="flex flex-col gap-4 md:grid md:grid-rows-2 md:grid-cols-4 p-4">
         {data.map((i) => (
           <div
             key={i.count}
