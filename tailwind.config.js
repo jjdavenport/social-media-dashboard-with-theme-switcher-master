@@ -2,7 +2,7 @@
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./index.html"],
   theme: {
-    darkMode: 'media',
+    darkMode: 'selector',
     extend: {
       fontFamily: {
         inter: ["inter", "sans-serif"],
