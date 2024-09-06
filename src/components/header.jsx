@@ -1,11 +1,24 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import data from "./assets/header.json";
 
 const Header = () => {
-  const [darkMode, setDarkMode] = useState(false);
-  const toggleButton = () => {
-    setDarkMode(!darkMode);
-  };
+  const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const [darkMode, setDarkMode] = useState(prefersDarkMode);
+
+  const toggle = () => {
+    setDarkMode(prev => !prev)
+  }
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+      console.log("Dark mode is enabled.");
+    } else {
+      document.documentElement.classList.remove("dark");
+      console.log("Light mode is enabled.");
+    }
+  }, [darkMode]);
+
   return (
     <>
       <header className="flex flex-col md:justify-between md:flex-row gap-4 p-4 bg-lightThemeTopBgPattern dark:bg-darkThemeTopBgPattern rounded-b-xl">
@@ -29,11 +42,12 @@ const Header = () => {
           </span>
           <label className="relative inline-flex items-center cursor-pointer ml-4">
             <input
-              onClick={toggleButton}
+              onClick={toggle}
               type="checkbox"
               value=""
               className="sr-only peer"
-              defaultChecked
+              checked={!darkMode}
+              onChange={() => {}}
             />
             <div
               className="w-14 h-6 rounded-full 
