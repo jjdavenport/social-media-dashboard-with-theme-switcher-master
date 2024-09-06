@@ -32,7 +32,7 @@ const Header = () => {
         </div>
         <div className="flex justify-between md:items-center md:gap-4">
           <span
-            className={` ${
+            className={`${
               darkMode
                 ? "dark:text-darkThemeText"
                 : "text-lightThemeDarkGrayishBlueText"
@@ -40,27 +40,18 @@ const Header = () => {
           >
             {data.settings}
           </span>
-          <label className="relative inline-flex items-center cursor-pointer ml-4">
-            <input
-              onClick={toggle}
-              type="checkbox"
-              value=""
-              className="sr-only peer"
-              defaultChecked={!darkMode}
-            />
+          <button
+            onClick={toggle}
+            className="relative inline-flex items-center cursor-pointer ml-4 w-14 h-6 rounded-full 
+              bg-gradient-to-r from-[hsl(210,78%,56%)] to-[hsl(146,68%,55%)]
+              transition-colors duration-300 ease-in-out"
+          >
             <div
-              className="w-14 h-6 rounded-full 
-                bg-gradient-to-r from-[hsl(210,78%,56%)] to-[hsl(146,68%,55%)]
-                transition-colors duration-300 ease-in-out"
-            ></div>
-            <div
-              className="absolute top-[2px] right-[2px] bg-[hsl(230,17%,14%)] rounded-full h-5 w-5 
+              className={`absolute top-[2px] left-[2px] bg-[hsl(230,17%,14%)] rounded-full h-5 w-5 
                 transition-all duration-300 ease-in-out
-                translate-x-[-2rem]
-                peer-checked:translate-x-0
-                peer-checked:bg-white"
+                ${!darkMode ? 'translate-x-8 bg-white' : 'translate-x-0'}`}
             ></div>
-          </label>
+          </button>
         </div>
       </header>
     </>
