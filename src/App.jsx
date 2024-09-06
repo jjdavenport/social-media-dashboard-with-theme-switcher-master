@@ -7,6 +7,7 @@ import Footer from "./components/footer";
 function App() {
   return (
     <>
+    <div>
       <main className="font-inter flex flex-col gap-2 bg-lightThemeBg dark:bg-darkThemeBg md:h-screen md:justify-between">
         <section>
           <Header />
@@ -18,6 +19,7 @@ function App() {
           <Footer />
         </section>
       </main>
+      </div>
     </>
   );
 }

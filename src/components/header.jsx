@@ -46,8 +46,7 @@ const Header = () => {
               type="checkbox"
               value=""
               className="sr-only peer"
-              checked={!darkMode}
-              onChange={() => {}}
+              defaultChecked={!darkMode}
             />
             <div
               className="w-14 h-6 rounded-full 
