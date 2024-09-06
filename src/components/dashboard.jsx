@@ -3,11 +3,11 @@ import data from "./assets/dashboard.json";
 const Dashboard = () => {
   return (
     <>
-      <section className="flex flex-col md:grid md:grid-flow-col gap-6 p-4">
+      <ul className="flex flex-col md:grid md:grid-flow-col gap-6 p-4">
         {data.map((i) => (
-          <div
+          <li
             key={i.followers}
-            className={`${i.border} flex flex-col bg-lightThemeCardBg items-center dark:bg-darkThemeCardBg gap-4 p-6`}
+            className={`${i.border} flex flex-col hover:bg-lightThemeHover cursor-pointer hover:dark:bg-darkThemeHover bg-lightThemeCardBg items-center dark:bg-darkThemeCardBg gap-6 p-8 transition duration-300 ease-in-out`}
           >
             <div className="flex h-max gap-2">
               <img className="object-contain" src={i.images} alt={i.username} />
@@ -15,12 +15,14 @@ const Dashboard = () => {
                 {i.username}
               </span>
             </div>
-            <span className="text-5xl dark:text-darkThemeWhiteText font-bold text-lightThemeVeryDarkBlueText">
+            <div className="flex flex-col items-center gap-2">
+            <span className="text-6xl dark:text-darkThemeWhiteText font-bold text-lightThemeVeryDarkBlueText">
               {i.followers}
             </span>
-            <span className="uppercase tracking-widest dark:text-darkThemeText text-lightThemeVeryDarkBlueText">
+            <span className="uppercase tracking-customSpacing dark:text-darkThemeText text-lightThemeVeryDarkBlueText">
               {i.type}
             </span>
+            </div>
             <div className="flex gap-1 items-center">
               <img className="object-contain" src={i.arrow} />
               <span
@@ -31,9 +33,9 @@ const Dashboard = () => {
                 {i.changeToday}
               </span>
             </div>
-          </div>
+          </li>
         ))}
-      </section>
+      </ul>
     </>
   );
 };

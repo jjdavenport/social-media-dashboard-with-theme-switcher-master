@@ -12,25 +12,23 @@ const Header = () => {
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
-      console.log("Dark mode is enabled.");
     } else {
       document.documentElement.classList.remove("dark");
-      console.log("Light mode is enabled.");
     }
   }, [darkMode]);
 
   return (
     <>
-      <header className="flex flex-col md:justify-between md:flex-row gap-4 p-4 bg-lightThemeTopBgPattern dark:bg-darkThemeTopBgPattern rounded-b-xl">
+      <header className="flex flex-col md:justify-between md:flex-row gap-4 p-6 rounded-b-2xl bg-lightThemeTopBgPattern dark:bg-darkThemeTopBgPattern md:p-8 md:pb-32 pb-16 xl:px-24">
         <div className="border-b md:border-none border-lightThemeVeryDarkBlueText pb-4 dark:border-darkThemeCardBg">
-          <h1 className="text-2xl font-bold text-lightThemeVeryDarkBlueText dark:text-darkThemeWhiteText">
+          <h1 className="text-2xl md:text-3xl font-bold text-lightThemeVeryDarkBlueText dark:text-darkThemeWhiteText">
             {data.dashboardTitle}
           </h1>
-          <span className="text-lightThemeDarkGrayishBlueText font-bold dark:text-darkThemeText">
+          <span className="text-lightThemeDarkGrayishBlueText font-bold text-lg dark:text-darkThemeText">
             {data.followers}
           </span>
         </div>
-        <div className="flex justify-between md:items-center md:gap-4">
+        <div className="flex justify-between md:items-center md:text-lg">
           <span
             className={`${
               darkMode
@@ -42,9 +40,8 @@ const Header = () => {
           </span>
           <button
             onClick={toggle}
-            className="relative inline-flex items-center cursor-pointer ml-4 w-14 h-6 rounded-full 
-              bg-gradient-to-r from-[hsl(210,78%,56%)] to-[hsl(146,68%,55%)]
-              transition-colors duration-300 ease-in-out"
+            className={` ${!darkMode ? "bg-lightThemeDarkGrayishBlueText" : "bg-gradient-to-r from-[hsl(210,78%,56%)] to-[hsl(146,68%,55%)]"} relative inline-flex items-center cursor-pointer ml-4 w-14 h-6 rounded-full 
+              transition-colors duration-300 ease-in-out`}
           >
             <div
               className={`absolute top-[2px] left-[2px] bg-[hsl(230,17%,14%)] rounded-full h-5 w-5 

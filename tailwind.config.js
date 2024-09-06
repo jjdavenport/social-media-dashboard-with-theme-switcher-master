@@ -4,6 +4,9 @@ export default {
   darkMode: "selector",
   theme: {
     extend: {
+      letterSpacing: {
+        customSpacing: "0.3em"
+      },
       fontFamily: {
         inter: ["inter", "sans-serif"],
       },
@@ -23,6 +26,11 @@ export default {
         lightThemeCardBg: "hsl(227, 47%, 96%)",
         lightThemeDarkGrayishBlueText: "hsl(228, 12%, 44%)",
         lightThemeVeryDarkBlueText: "hsl(230, 17%, 14%)",
+        lightThemeHover: "hsl(225, 35%, 91%)",
+        darkThemeHover: "hsl(228, 26%, 27%)",
+      },
+      backgroundSize: {
+        customHeight: "auto 30%"
       },
       backgroundImage: {
         instagram:

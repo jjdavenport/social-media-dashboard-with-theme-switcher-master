@@ -7,17 +7,21 @@ import Footer from "./components/footer";
 function App() {
   return (
     <>
-      <main className="font-inter flex flex-col gap-2 bg-lightThemeBg dark:bg-darkThemeBg md:h-screen md:justify-between">
-        <section>
-          <Header />
+      <div className="font-inter flex flex-col gap-2 text-sm bg-lightThemeBg dark:bg-darkThemeBg md:h-screen md:justify-between md:items-center">
+      <div className="flex flex-col w-full">
+      <Header />
+        <main className="md:-mt-36 md:p-2 lg:p-4 -mt-14 xl:px-20"> 
+          <section>
           <Dashboard />
+          </section>
+          <section className="p-6 md:p-2 lg:p-4 flex flex-col gap-4">
           <OverviewTitle />
           <Overview />
-        </section>
-        <section>
+          </section>
+        </main>
+        </div>
           <Footer />
-        </section>
-      </main>
+          </div>
     </>
   );
 }

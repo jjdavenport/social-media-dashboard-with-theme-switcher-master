@@ -3,11 +3,11 @@ import data from "./assets/overview.json";
 const Overview = () => {
   return (
     <>
-      <section className="flex flex-col gap-4 md:grid md:grid-rows-2 md:grid-cols-4 p-4">
+      <ul className="flex flex-col gap-4 md:grid md:grid-rows-2 md:grid-cols-4">
         {data.map((i) => (
-          <div
+          <li
             key={i.count}
-            className="bg-lightThemeTopBgPattern dark:bg-darkThemeCardBg p-4 flex flex-col gap-4 rounded-md"
+            className="bg-lightThemeTopBgPattern transition duration-300 ease-in-out hover:bg-lightThemeHover cursor-pointer hover:dark:bg-darkThemeHover dark:bg-darkThemeCardBg p-6 md:p-4 flex flex-col gap-6 rounded-md"
           >
             <div className="flex justify-between">
               <span className="text-lightThemeDarkGrayishBlueText font-bold dark:text-darkThemeText">
@@ -30,9 +30,9 @@ const Overview = () => {
                 </span>
               </div>
             </div>
-          </div>
+          </li>
         ))}
-      </section>
+      </ul>
     </>
   );
 };
